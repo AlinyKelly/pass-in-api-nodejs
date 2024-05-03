@@ -1,0 +1,31 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": "Unite Summer 2",
+  "details": "Evento explorer",
+  "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/5e8931f8-683b-4341-956b-a4cf3fd67b75/attendees
+Content-Type: application/json
+
+{
+  "name": "Aliny Kelly",
+  "email": "aliny2@gmail.com"
+}
+
+###
+GET http://localhost:3333/events/5e8931f8-683b-4341-956b-a4cf3fd67b75
+
+
+###
+GET http://localhost:3333/attendees/2/badge
+
+###
+GET http://localhost:3333/attendees/2/check-in
+
+###
+GET http://localhost:3333/events/5e8931f8-683b-4341-956b-a4cf3fd67b75/attendees?query=aliny
